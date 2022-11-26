@@ -6,7 +6,7 @@ import IntersectObserver from "@/components/IntersectObserver";
 import type { IUser } from "@/types/user";
 
 export default function Home() {
-  const { isFetching, data, hasNextPage, fetchNextPage } = useFetchUserList();
+  const { data, hasNextPage, fetchNextPage } = useFetchUserList();
 
   const handleIntersection = () => {
     if (hasNextPage) {
