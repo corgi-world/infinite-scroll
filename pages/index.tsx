@@ -30,9 +30,7 @@ export default function Home() {
   return (
     <Wrapper>
       {renderUserList()}
-      {!isFetching && hasNextPage && (
-        <IntersectObserver handleIntersection={handleIntersection} />
-      )}
+      {hasNextPage && <IntersectObserver handleIntersection={handleIntersection} />}
     </Wrapper>
   );
 }
