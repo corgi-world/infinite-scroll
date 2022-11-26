@@ -5,13 +5,6 @@ const GlobalStyles = createGlobalStyle`
   ${reset}
   * {
     box-sizing:border-box;
-    outline:none;
-    border:none;
-    ::-webkit-scrollbar {
-      display: none;
-    }
-    -ms-overflow-style: none;
-    scrollbar-width: none;
  }
 `;
 
