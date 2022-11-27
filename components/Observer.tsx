@@ -5,7 +5,7 @@ interface IProps {
   handleIntersection: () => void;
 }
 
-export default function IntersectObserver({ handleIntersection }: IProps) {
+export default function Observer({ handleIntersection }: IProps) {
   const target = useRef(null);
 
   useEffect(() => {
@@ -25,10 +25,15 @@ export default function IntersectObserver({ handleIntersection }: IProps) {
     return () => observer.disconnect();
   }, []);
 
-  return <Wrapper ref={target} />;
+  return <Wrapper ref={target}>이게 보이면? 다음 데이터를!</Wrapper>;
 }
 
 const Wrapper = styled.div`
-  height: 100px;
-  background-color: black;
+  height: 150px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 20px;
 `;

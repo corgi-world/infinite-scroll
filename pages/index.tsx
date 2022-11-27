@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import User from "@/components/User";
 import { useFetchUserList } from "@/queries/user";
-import IntersectObserver from "@/components/IntersectObserver";
+import Observer from "@/components/Observer";
 import type { IUser } from "@/types/user";
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <Wrapper>
       {renderUserList()}
-      {hasNextPage && <IntersectObserver handleIntersection={handleIntersection} />}
+      {hasNextPage && <Observer handleIntersection={handleIntersection} />}
     </Wrapper>
   );
 }
