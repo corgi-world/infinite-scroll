@@ -5,7 +5,7 @@ import type { IUserResponse } from "@/types/user";
 const service = axios.create({
   baseURL: "/api/userList",
 });
-function get(queryString = "") {
+function get(queryString: string) {
   return service.get(queryString).then((response) => response.data);
 }
 
