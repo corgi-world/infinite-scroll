@@ -9,8 +9,8 @@ export default async function handler(
   res: NextApiResponse<IUserResponse>
 ) {
   const { id } = req.query;
-
   const isFirstPage = !id;
+
   const pageCondition = {
     skip: 1,
     cursor: {
