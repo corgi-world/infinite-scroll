@@ -10,7 +10,7 @@ export default async function handler(
 ) {
   const { id } = req.query;
 
-  const isFirstPage = !!id;
+  const isFirstPage = !id;
   const pageCondition = {
     skip: 1,
     cursor: {
@@ -24,7 +24,7 @@ export default async function handler(
     orderBy: { }
     */
     take: TAKE_COUNT,
-    ...(isFirstPage && pageCondition),
+    ...(!isFirstPage && pageCondition),
   });
 
   const length = userList.length;
